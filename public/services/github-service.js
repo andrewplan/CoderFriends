@@ -16,10 +16,15 @@ angular.module( 'coderFriendsApp' )
               currentUser = user;
               return user;
             } );
-            return $http.get( '/api/github/following', currentUser ).then( following => {
-                console.log( following );
+            return $http.get( '/api/github/following', currentUser )
+              .then( following => {
+                // console.log( following );
                 return following;
             } );
         };
+
+        this.getFriendActivity = function( username ) {
+            return $http.get( '/api/github/' + username + '/activity' );
+        }; 
 
     } );

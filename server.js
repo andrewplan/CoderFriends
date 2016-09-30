@@ -62,7 +62,15 @@ app.get( '/api/github/following', requireAuth, ( req, res ) => {
       res.send( following );
     }
   );
-  // res.send( req.user );
+} );
+
+app.get( '/api/github/:username/activity', requireAuth, ( req, res ) => {
+  github.activity.getEventsForUser(
+    { user: req.params.username }, ( err, events ) => {
+        console.log( events );
+        res.send( events );
+    }
+  );
 } );
 
 app.listen( port, () => { console.log( `Listening on port ${ port }` ) } );

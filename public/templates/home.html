@@ -1,7 +1,13 @@
-<h1>You are home, {{ user.username }}!</h1>
+<h1>Welcome, {{ user.username }}!</h1>
 
-<button ng-click="getFriends()">Get friends</button>
-<h2>Your coder friends are:</h2>
+<h2>You are following:</h2>
 <ul>
-  <li ng-repeat="friend in friends">{{ friend }}</li>
+  <li
+    ng-click="getFriendActivity( friend.login )"
+    ng-repeat="friend in friends"
+    ui-sref="friend( { github_username: friend.login } )"
+  >
+    <p>{{ friend.login }}</p>
+    <img ng-src="https://avatars.githubusercontent.com/u/110953?v=3" alt="Avatar">
+  </li>
 </ul>

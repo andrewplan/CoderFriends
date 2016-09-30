@@ -1,0 +1,10 @@
+<h1>Recent activity for {{ username }}</h1>
+<ul>
+  <li ng-repeat="event in events">
+    <p>{{ event.createdAt}}</p>
+    <p>{{ event.type }}</p>
+    <a href="{{ event.repo.url }}">{{ event.repo.name }}</a>
+    <p>{{ event.payload.pull_request.body }}</p>
+    <a href="{{ event.payload.pull_request._links.html.href }}">Link</a>
+  </li>
+</ul>

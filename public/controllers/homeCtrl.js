@@ -6,6 +6,4 @@ angular.module( 'coderFriendsApp' )
         console.log( 'user is ', user );
         $scope.user = user.data;
 
-
-
     } );
