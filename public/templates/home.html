@@ -1,0 +1,7 @@
+<h1>You are home, {{ user.username }}!</h1>
+
+<button ng-click="getFriends()">Get friends</button>
+<h2>Your coder friends are:</h2>
+<ul>
+  <li ng-repeat="friend in friends">{{ friend }}</li>
+</ul>

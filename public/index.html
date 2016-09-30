@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  ng-app="coderFriendsApp"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Coder Friends</title>
+</head>
+<body>
+
+  <button>
+      <a href="/auth/github">Login with GitHub</a>
+  </button>
+
+  <ui-view></ui-view>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js" charset="utf-8"></script>
+  <script src="./app.js" charset="utf-8"></script>
+  <script src="./githubCtrl.js" charset="utf-8"></script>
+  <script src="./services/github-service.js" charset="utf-8"></script>
+  <script src="./controllers/homeCtrl.js" charset="utf-8"></script>
+</body>
+</html>
